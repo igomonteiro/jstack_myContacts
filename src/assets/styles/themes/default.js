@@ -1,5 +1,6 @@
 export default {
   colors: {
+    background: '#F6F5FC',
     primary: {
       lighter: '#E0E3FF',
       light: '#6674F4',
@@ -9,7 +10,15 @@ export default {
     gray: {
       900: '#222222',
       200: '#bcbcbc',
+      100: '#E6E6E6',
     },
-    background: '#F6F5FC',
+    danger: {
+      light: '#F97171',
+      main: '#FC5050',
+      dark: '#F63131',
+    },
+    success: {
+      main: '#51CA73',
+    },
   },
 };
