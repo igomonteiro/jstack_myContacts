@@ -5,8 +5,8 @@ class ContactMapper {
       name: domainContact.name,
       email: domainContact.email,
       phone: domainContact.phone,
-      category_id: domainContact.categoryId
-    }
+      category_id: domainContact.categoryId,
+    };
   }
 
   toDomain(persintenceContact) {
@@ -18,8 +18,8 @@ class ContactMapper {
       category: {
         id: persintenceContact.category_id,
         name: persintenceContact.category_name,
-      }
-    }
+      },
+    };
   }
 }
 

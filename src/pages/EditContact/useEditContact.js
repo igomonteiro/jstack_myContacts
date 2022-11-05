@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 
 import ContactsService from '../../services/ContactsService';
 import toast from '../../utils/toast';
@@ -62,5 +62,5 @@ export default function useEditContact() {
     contactName,
     contactFormRef,
     handleSubmit,
-  }
+  };
 }

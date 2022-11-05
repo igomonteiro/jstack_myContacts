@@ -102,5 +102,5 @@ export default function useContactForm(onSubmit, ref) {
     setCategoryId,
     categories,
     isFormValid,
-  }
+  };
 }

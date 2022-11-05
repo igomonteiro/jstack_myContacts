@@ -10,7 +10,6 @@ import Button from '../Button';
 import useContactForm from './useContactForm';
 
 const ContactForm = forwardRef(({ buttonLabel, onSubmit }, ref) => {
-
   const {
     handleSubmit,
     getErrorMessageByFieldName,
