@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Container, Overlay, Footer } from './styles';
 import Button from '../Button';
 import ReactPortal from '../ReactPortal';
+import useAnimatedUnmount from '../../hooks/useAnimatedUnmount';
 
 export default function Modal({
   danger,
@@ -14,7 +15,9 @@ export default function Modal({
   onConfirm,
   children,
 }) {
-  if (!visible) {
+  const { shouldRender, animatedElementRef } = useAnimatedUnmount(visible);
+
+  if (!shouldRender) {
     return null;
   }
 
@@ -27,8 +30,8 @@ export default function Modal({
 
   return (
     <ReactPortal containerId="modal-root">
-      <Overlay>
-        <Container danger={danger}>
+      <Overlay isLeaving={!visible} ref={animatedElementRef}>
+        <Container danger={danger} isLeaving={!visible}>
           <h1>{title}</h1>
           <div className="modal-body">{children}</div>
           <Footer>
