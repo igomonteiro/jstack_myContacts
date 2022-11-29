@@ -46,7 +46,7 @@ export default function useEditContact() {
       toast({
         type: 'success',
         text: 'Contato editado com sucesso!',
-        duration: 3000,
+        duration: 5000,
       });
     } catch {
       toast({

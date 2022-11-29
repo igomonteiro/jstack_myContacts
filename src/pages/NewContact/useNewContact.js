@@ -14,7 +14,7 @@ export default function useNewContact() {
       toast({
         type: 'success',
         text: 'Contato criado com sucesso!',
-        duration: 3000,
+        duration: 5000,
       });
     } catch {
       toast({
